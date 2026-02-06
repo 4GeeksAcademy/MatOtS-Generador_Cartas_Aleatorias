@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-success">
-  <div class="card mx-auto mt-5 rounded-5" style="max-width: 150px; height: 200px;">
+  <div id="cardItem" class="card mx-auto mt-5 rounded-5 cardSize">
     <div id="paloT" class="fs-1 ps-2">♦</div>
     <div class="card-body  lh-lg">
       <p id="cardValue" class="text-black fs-1 text-center mb-0">
@@ -22,6 +22,24 @@
     </div>
     <div id="paloB" class="fs-1 d-flex pe-2 justify-content-end" style="transform: rotateX(180deg);">♦</div>
   </div>
+    <div class="container mx-auto d-flex justify-content-center mt-5">
+      <button id="button" onclick=changeValues() type="button" class="btn btn-light">New Card</button>
+    </div>
+    <div class="row mx-auto d-flex mt-2 p-2">
+      <div class="col-6">
+        <label class="text-light" for="width">Set custom Width</label>
+        <input type="number" name="width" id="widthInput" min="150" placeholder="Insert a width">
+      </div>
+      <div class="col-6">
+        <label class="text-light" for="height">Set custom Height</label>
+        <input type="number" name="height" id="heightInput" min="200" placeholder="Insert a height">
+      </div>
+      <div class="col-12 d-flex justify-content-center">
+        <button type="button" onclick=changeSize() class="btn btn-light mt-2">Change Size!</button>
+      </div>
+    </div>
+
+
 
   <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
   <script type="module" src="/app.js"></script>
